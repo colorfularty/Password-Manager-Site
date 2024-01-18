@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Signup{% endblock %}
+{% block content %}
+    <form method="post" id="signup-form">
+        <div id="username-input">
+            <label for="username">Enter Username</label>
+            <input type="text" id="username" name="username" value="{{username}}" />
+        </div>
+        <div id="password-input">
+            <label for="password">Enter Password</label>
+            <input type="password" id="password" name="password" value="{{password}}" />
+        </div>
+        <div id="password2-input">
+            <label for="password2">Re-renter Password</label>
+            <input type="password" id="password2" name="password2" value="{{password2}}" />
+        </div>
+        <hr />
+        <button type="submit" id="signup" name="signup">Sign up</button>
+        <button type="submit" id="cancel" name="cancel">Go to Login Page</button>
+    </form>
+{% endblock %}

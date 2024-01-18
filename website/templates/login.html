@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <form method="post" id="login-form">
+        <div id="name-input">
+            <label for="name">Username</label>
+            <input type="text" id="username" name="username" value="{{remembered_username}}" />
+        </div>
+        <div id="password-input">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" value="{{remembered_password}}" />
+        </div>
+        <hr />
+        <button type="submit" id="login" name="create">Login</button>
+        <button type="submit" id="signup" name="signup">Go to Signup Page</button>
+    </form>
+{% endblock %}

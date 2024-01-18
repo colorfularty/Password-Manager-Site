@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="static/styles.css" />
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == "error" %}
+                        <p class="error">{{message}}</p>
+                    {% elif category == "success" %}
+                        <p class="success">{{message}}</p>
+                    {% else %}
+                        <p class="message">{{message}}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

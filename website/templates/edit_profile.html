@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Edit Profile{% endblock %}
+{% block content %}
+    <div id="info">
+        <p class="info">Enter a new username and/or password.<br />If you do not want to change one of them, leave it unchanged.</p>
+    </div>
+    <br />
+    <form method="post" id="profile-form">
+        <div id="username-input">
+            <label for="new-username">New username:</label>
+            <input type="text" id="new-username" name="new-username" value="{{new_username}}" />
+        </div>
+        <div id="password-input">
+            <label for="new-password">New password:</label>
+            <input type="password" id="new-password" name="new-password" value="{{new_password}}" />
+        </div>
+        <div id="password-input2">
+            <label for="new-password2">Re-enter password:</label>
+            <input type="password" id="new-password2" name="new-password2" value="{{new_password2}}" />
+        </div>
+        <br />
+        <button type="submit" id="cancel" name="cancel">Cancel</button>
+        <button type="submit" id="update" name="update">Update</button>
+    </form>
+{% endblock %}

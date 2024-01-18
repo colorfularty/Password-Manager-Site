@@ -1,0 +1,28 @@
+.message {
+    background-color: gray;
+}
+
+.success {
+    background-color: green;
+}
+
+.error {
+    background-color: red;
+}
+
+.info {
+    color: white;
+}
+
+.navbar {
+    text-align: left;
+    color: white;
+}
+
+html {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVpBRI0wAesN0XfguJiujkpN22DHxt9CLRyw&usqp=CAU");
+}
+
+label {
+    color: white;
+}
